@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_form_defaults",
+  "info": {
+    "displayName": "Form_Ratio",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Topic_Assessment": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "Description": {
+      "type": "blocks",
+      "required": false
+    },
+    "Ratio": {
+      "max": 5,
+      "min": 2,
+      "type": "integer",
+      "required": true
+    }
+  }
+}

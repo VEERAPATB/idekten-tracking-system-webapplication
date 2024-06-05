@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_form_feedbacks",
+  "info": {
+    "displayName": "Feedback",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Topic_Feedback": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "Input_value": {
+      "type": "string",
+      "default": "-",
+      "maxLength": 255
+    },
+    "Description": {
+      "type": "blocks"
+    }
+  }
+}
