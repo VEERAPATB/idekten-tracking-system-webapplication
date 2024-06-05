@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "form_assessments",
+  "info": {
+    "singularName": "form-assessment",
+    "pluralName": "form-assessments",
+    "displayName": "Form_Assessments",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Topic_Assessment": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255,
+      "unique": true
+    },
+    "Week": {
+      "type": "integer",
+      "min": 1,
+      "max": 10,
+      "required": true
+    },
+    "Form_Radio": {
+      "type": "component",
+      "repeatable": true,
+      "component": "form.default",
+      "required": true
+    },
+    "level": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::level.level",
+      "inversedBy": "form_assessments"
+    }
+  }
+}

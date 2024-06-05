@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "category_skillsets",
+  "info": {
+    "singularName": "category-skillset",
+    "pluralName": "category-skillsets",
+    "displayName": "Category_Skillsets",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name_skill": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Description": {
+      "type": "text"
+    },
+    "category_courses": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category-course.category-course",
+      "mappedBy": "category_skillsets"
+    }
+  }
+}

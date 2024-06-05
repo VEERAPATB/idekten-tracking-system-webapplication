@@ -1,7 +1,24 @@
 version: '3'
 services:
-  client:
-    build: ./client
-    ports:
-      - "3000:3000"
-  
+  strapi:
+    container_name: strapi-idektep
+    image: gustheworld/strapi-idektep:latest
+    restart: always
+    build: ./strapi/
+    env_file:
+      - ./strapi/.env
+    ports: 
+      - "1337:1337"
+    networks:
+      - strapi_nw
+  watchtower:
+    container_name: watchtower
+    image: containrrr/watchtower
+    environment:
+      - WATCHTOWER_CLEANUP=true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 30 strapi-idektep
+networks:
+  strapi_nw:
+    driver: bridge 

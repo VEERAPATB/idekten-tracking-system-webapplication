@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_register_student_s",
+  "info": {
+    "displayName": "Student ",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "EN_Name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "EN_Nickname": {
+      "type": "string",
+      "maxLength": 255,
+      "required": true
+    },
+    "TH_Name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "TH_Nickname": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "Citizen": {
+      "type": "string",
+      "required": true,
+      "maxLength": 13
+    },
+    "Birthday": {
+      "type": "date",
+      "required": true
+    },
+    "School": {
+      "type": "string",
+      "required": false,
+      "maxLength": 255
+    },
+    "Telephone": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

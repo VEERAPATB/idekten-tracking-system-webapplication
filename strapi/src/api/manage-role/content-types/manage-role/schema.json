@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "manage_roles",
+  "info": {
+    "singularName": "manage-role",
+    "pluralName": "manage-roles",
+    "displayName": "Manage_Roles",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Description": {
+      "type": "text"
+    },
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "manage_role"
+    },
+    "Priority": {
+      "type": "enumeration",
+      "enum": [
+        "Admin",
+        "Employee",
+        "Student"
+      ],
+      "required": true
+    }
+  }
+}

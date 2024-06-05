@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "classes",
+  "info": {
+    "singularName": "class",
+    "pluralName": "classes",
+    "displayName": "Classes",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name_Class": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Description": {
+      "type": "string"
+    },
+    "category_branch": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    },
+    "category_course": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category-course.category-course"
+    },
+    "Section": {
+      "type": "string",
+      "required": true
+    },
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "classes"
+    },
+    "Generation": {
+      "type": "integer",
+      "required": false,
+      "min": 1
+    }
+  }
+}
