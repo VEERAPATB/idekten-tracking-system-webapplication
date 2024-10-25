@@ -1,4 +1,4 @@
-# iDekTep - Test
+# idektep-system-test
 
 # PATH
 * /auth/signin : LOGIN
