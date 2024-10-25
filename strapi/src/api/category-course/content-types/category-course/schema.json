@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "category_courses",
+  "info": {
+    "singularName": "category-course",
+    "pluralName": "category-courses",
+    "displayName": "Courses",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name_Course": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Description": {
+      "type": "string"
+    },
+    "category_skillsets": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category-skillset.category-skillset",
+      "inversedBy": "category_courses"
+    },
+    "levels": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::level.level",
+      "mappedBy": "category_course"
+    }
+  }
+}

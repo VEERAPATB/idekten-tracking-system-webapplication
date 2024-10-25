@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "levels",
+  "info": {
+    "singularName": "level",
+    "pluralName": "levels",
+    "displayName": "Levels",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name_level": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Level": {
+      "type": "integer",
+      "max": 5,
+      "min": 1,
+      "required": true
+    },
+    "Description": {
+      "type": "text"
+    },
+    "form_assessments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::form-assessment.form-assessment",
+      "mappedBy": "level"
+    },
+    "category_course": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category-course.category-course",
+      "inversedBy": "levels"
+    }
+  }
+}

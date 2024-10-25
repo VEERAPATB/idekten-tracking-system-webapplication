@@ -1,0 +1,64 @@
+{
+  "collectionName": "components_register_employees",
+  "info": {
+    "displayName": "Employee",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "EN_Name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "EN_Nickname": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "TH_Name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "TH_Nickname": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "Citizen": {
+      "type": "string",
+      "maxLength": 13,
+      "required": true
+    },
+    "Birthday": {
+      "type": "date",
+      "required": true
+    },
+    "ID_Line": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "Telephone": {
+      "type": "string",
+      "required": true,
+      "maxLength": 10
+    },
+    "Bank": {
+      "type": "enumeration",
+      "enum": [
+        "Promtpay - พร้อมเพย์",
+        "KBANK - กสิการ",
+        "SCB - ไทยพาณิชย์",
+        "BAY - กรุงศรีอยุธยา",
+        "UOB - ยูโอบี"
+      ],
+      "required": true
+    },
+    "ID_Bank": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
